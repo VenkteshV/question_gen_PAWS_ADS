@@ -3058,3 +3058,1683 @@ Unlike a statistical ensemble in statistical mechanics, which is usually infinit
 Support vector machine,"In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. Developed at AT&T Bell Laboratories by Vladimir Vapnik with colleagues (Boser et al., 1992, Guyon et al., 1993, Cortes and Vapnik, 1995, Vapnik et al., 1997) SVMs are one of the most robust prediction methods, being based on statistical learning frameworks or VC theory proposed by Vapnik (1982, 1995) and Chervonenkis (1974). Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). SVM maps training examples to points in space so as to maximise the width of the gap between the two categories. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
 In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
 When data are unlabelled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The support vector clustering algorithm, created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data."
+bias-variance tradeoff,"In statistics and machine learning, the bias–variance tradeoff is the property of a model that the variance of the parameter estimated across samples can be reduced by increasing the bias in the estimated parameters.
+The bias–variance dilemma or bias–variance problem is the conflict in trying to simultaneously minimize these two sources of error that prevent supervised learning algorithms from generalizing beyond their training set:
+The bias error is an error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting).
+The variance is an error from sensitivity to small fluctuations in the training set. High variance may result from an algorithm modeling the random noise in the training data (overfitting).The bias–variance decomposition is a way of analyzing a learning algorithm's expected generalization error with respect to a particular problem as a sum of three terms, the bias, variance, and a quantity called the irreducible error, resulting from noise in the problem itself."
+Bias–variance tradeoff,"In statistics and machine learning, the bias–variance tradeoff is the property of a model that the variance of the parameter estimated across samples can be reduced by increasing the bias in the estimated parameters.
+The bias–variance dilemma or bias–variance problem is the conflict in trying to simultaneously minimize these two sources of error that prevent supervised learning algorithms from generalizing beyond their training set:
+The bias error is an error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting).
+The variance is an error from sensitivity to small fluctuations in the training set. High variance may result from an algorithm modeling the random noise in the training data (overfitting).The bias–variance decomposition is a way of analyzing a learning algorithm's expected generalization error with respect to a particular problem as a sum of three terms, the bias, variance, and a quantity called the irreducible error, resulting from noise in the problem itself."
+Supervised learning,"Supervised learning (SL) is a machine learning paradigm for problems where the available data consists of labelled examples, meaning that each data point contains features (covariates) and an associated label. The goal of supervised learning algorithms is learning a function that maps feature vectors (inputs) to labels (output), based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. An optimal scenario will allow for the algorithm to correctly determine the class labels for unseen instances. This requires the learning algorithm to generalize from the training data to unseen situations in a ""reasonable"" way (see inductive bias). This statistical quality of an algorithm is measured through the so-called generalization error."
+Overfitting,"In mathematical modeling, overfitting is ""the production of an analysis that corresponds too closely or exactly to a particular set of data, and may therefore fail to fit to additional data or predict future observations reliably"". An overfitted model is a mathematical model that contains more parameters than can be justified by the data. The essence of overfitting is to have unknowingly extracted some of the residual variation (i.e., the noise) as if that variation represented underlying model structure.: 45 Underfitting occurs when a mathematical model cannot adequately capture the underlying structure of the data. An under-fitted model is a model where some parameters or terms that would appear in a correctly specified model are missing. Under-fitting would occur, for example, when fitting a linear model to non-linear data. Such a model will tend to have poor predictive performance.
+The possibility of over-fitting exists because the criterion used for selecting the model is not the same as the criterion used to judge the suitability of a model. For example, a model might be selected by maximizing its performance on some set of training data, and yet its suitability might be determined by its ability to perform well on unseen data; then over-fitting occurs when a model begins to ""memorize"" training data rather than ""learning"" to generalize from a trend. 
+As an extreme example, if the number of parameters is the same as or greater than the number of observations, then a model can perfectly predict the training data simply by memorizing the data in its entirety. (For an illustration, see Figure 2.) Such a model, though, will typically fail severely when making predictions. 
+The potential for overfitting depends not only on the number of parameters and data but also the conformability of the model structure with the data shape, and the magnitude of model error compared to the expected level of noise or error in the data. Even when the fitted model does not have an excessive number of parameters, it is to be expected that the fitted relationship will appear to perform less well on a new data set than on the data set used for fitting (a phenomenon sometimes known as shrinkage). In particular, the value of the coefficient of determination will shrink relative to the original data.
+To lessen the chance or amount of overfitting, several techniques are available (e.g., model comparison, cross-validation, regularization, early stopping, pruning, Bayesian priors, or dropout). The basis of some techniques is either (1) to explicitly penalize overly complex models or (2) to test the model's ability to generalize by evaluating its performance on a set of data not used for training, which is assumed to approximate the typical unseen data that a model will encounter."
+Mean squared error,"In statistics, the mean squared error (MSE) or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the actual value. MSE is a risk function, corresponding to the expected value of the squared error loss. The fact that MSE is almost always strictly positive (and not zero) is because of randomness or because the estimator does not account for information that could produce a more accurate estimate. In machine learning, specifically empirical risk minimization, MSE may refer to the empirical risk (the average loss on an observed data set), as an estimate of the true MSE (the true risk: the average loss on the actual population distribution).
+The MSE is a measure of the quality of an estimator.  As it is derived from the square of Euclidean distance, it is always a positive value that decreases as the error approaches zero.
+The MSE is the second moment (about the origin) of the error, and thus incorporates both the variance of the estimator (how widely spread the estimates are from one data sample to another) and its bias (how far off the average estimated value is from the true value). For an unbiased estimator, the MSE is the variance of the estimator. Like the variance, MSE has the same units of measurement as the square of the quantity being estimated. In an analogy to standard deviation, taking the square root of MSE yields the root-mean-square error or root-mean-square deviation (RMSE or RMSD), which has the same units as the quantity being estimated; for an unbiased estimator, the RMSE is the square root of the variance, known as the standard error."
+Less-is-more effect,The less-is-more effect refers to the finding that heuristic decision strategies can yield more accurate judgments than alternative strategies that use more pieces of information. Understanding these effects is part of the study of ecological rationality.
+Exponential distribution,"In probability theory and statistics, the exponential distribution is the probability distribution of the time between events in a Poisson point process, i.e., a process in which events occur continuously and independently at a constant average rate. It is a particular case of the gamma distribution. It is the continuous analogue of the geometric distribution, and it has the key property of being memoryless. In addition to being used for the analysis of Poisson point processes it is found in various other contexts.
+The exponential distribution is not the same as the class of exponential families of distributions. This is a large class of probability distributions that includes the exponential distribution as one of its members, but also includes many other distributions, like the normal, binomial, gamma, and Poisson distributions."
+Trade-off,"A trade-off (or tradeoff) is a situational decision that involves diminishing or losing one quality, quantity, or property of a set or design in return for gains in other aspects. In simple terms, a tradeoff is where one thing increases, and another must decrease. Tradeoffs stem from limitations of many origins, including simple physics – for instance, only a certain volume of objects can fit into a given space, so a full container must remove some items in order to accept any more, and vessels can carry a few large items or multiple small items. Tradeoffs also commonly refer to different configurations of a single item, such as the tuning of strings on a guitar to enable different notes to be played, as well as an allocation of time and attention towards different tasks.
+The concept of a tradeoff suggests a tactical or strategic choice made with full comprehension of the advantages and disadvantages of each setup. An economic example is the decision to invest in stocks, which are risky but carry great potential return, versus bonds, which are generally safer but with lower potential returns."
+Double descent,"In statistics and machine learning, double descent is the phenomenon where a statistical model with a small number of parameters and a model with an extremely large number of parameters have a small error, but a model whose number of parameters is about the same as the number of data points used to train the model will have a large error. This phenomenon seems to contradict the bias-variance tradeoff in classical statistics, which states that having too many parameters will yield an extremely large error."
+Ridge regression,"Ridge regression is a method of estimating the coefficients of multiple-regression models in scenarios where the independent variables are highly correlated. It has been used in many fields including econometrics, chemistry, and engineering. Also known as Tikhonov regularization, named for Andrey Tikhonov, it is a method of regularization of ill-posed problems. it is particularly useful to mitigate the problem of multicollinearity in linear regression, which commonly occurs in models with large numbers of parameters. In general, the method provides improved efficiency in parameter estimation problems in exchange for a tolerable amount of bias (see bias–variance tradeoff).The theory was first introduced by Hoerl and Kennard in 1970 in their Technometrics papers “RIDGE regressions: biased estimation of nonorthogonal problems” and “RIDGE regressions: applications in nonorthogonal problems”. This was the result of ten years of research into the field of ridge analysis.Ridge regression was developed as a possible solution to the imprecision of least square estimators when linear regression models have some multicollinear (highly correlated) independent variables—by creating a ridge regression estimator (RR). This provides a more precise ridge parameters estimate, as its variance and mean square estimator are often smaller than the least square estimators previously derived."
+Minimum-variance unbiased estimator,"In statistics a minimum-variance unbiased estimator (MVUE) or uniformly minimum-variance unbiased estimator (UMVUE) is an unbiased estimator that has lower variance than any other unbiased estimator for all possible values of the parameter.
+For practical statistics problems, it is important to determine the MVUE if one exists, since less-than-optimal procedures would naturally be avoided, other things being equal. This has led to substantial development of statistical theory related to the problem of optimal estimation.
+While combining the constraint of unbiasedness with the desirability metric of least variance leads to good results in most practical settings—making MVUE a natural starting point for a broad range of analyses—a targeted specification may perform better for a given problem; thus, MVUE is not always the best stopping point."
+support vector machines,"In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. Developed at AT&T Bell Laboratories by Vladimir Vapnik with colleagues (Boser et al., 1992, Guyon et al., 1993, Cortes and Vapnik, 1995, Vapnik et al., 1997) SVMs are one of the most robust prediction methods, being based on statistical learning frameworks or VC theory proposed by Vapnik (1982, 1995) and Chervonenkis (1974). Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). SVM maps training examples to points in space so as to maximise the width of the gap between the two categories. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
+When data are unlabelled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The support vector clustering algorithm, created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data."
+Support vector machine,"In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. Developed at AT&T Bell Laboratories by Vladimir Vapnik with colleagues (Boser et al., 1992, Guyon et al., 1993, Cortes and Vapnik, 1995, Vapnik et al., 1997) SVMs are one of the most robust prediction methods, being based on statistical learning frameworks or VC theory proposed by Vapnik (1982, 1995) and Chervonenkis (1974). Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). SVM maps training examples to points in space so as to maximise the width of the gap between the two categories. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
+When data are unlabelled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The support vector clustering algorithm, created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data."
+Least-squares support vector machine,"In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. Developed at AT&T Bell Laboratories by Vladimir Vapnik with colleagues (Boser et al., 1992, Guyon et al., 1993, Cortes and Vapnik, 1995, Vapnik et al., 1997) SVMs are one of the most robust prediction methods, being based on statistical learning frameworks or VC theory proposed by Vapnik (1982, 1995) and Chervonenkis (1974). Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). SVM maps training examples to points in space so as to maximise the width of the gap between the two categories. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
+When data are unlabelled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The support vector clustering algorithm, created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data."
+Kernel method,"In machine learning, kernel machines are a class of algorithms for pattern analysis, whose best known member is the support-vector machine (SVM). The general task of pattern analysis is to find and study general types of relations (for example clusters, rankings, principal components, correlations, classifications) in datasets. For many algorithms that solve these tasks, the data in raw representation have to be explicitly transformed into feature vector representations via a user-specified feature map: in contrast, kernel methods require only a user-specified kernel, i.e., a similarity function over all pairs of data points computed using Inner products. The feature map in kernel machines is infinite dimensional but only requires a finite dimensional matrix from user-input according to the Representer theorem. Kernel machines are slow to compute for datasets larger than a couple of thousand examples without parallel processing. 
+Kernel methods  owe their name to the use of kernel functions, which enable them to operate in a high-dimensional, implicit feature space without ever computing the coordinates of the data in that space, but rather by simply computing the inner products between the images of all pairs of data in the feature space.  This operation is often computationally cheaper than the explicit computation of the coordinates.  This approach is called the ""kernel trick"". Kernel functions have been introduced for sequence data, graphs, text, images, as well as vectors.
+Algorithms capable of operating with kernels include the kernel perceptron, support-vector machines (SVM), Gaussian processes, principal components analysis (PCA), canonical correlation analysis, ridge regression, spectral clustering, linear adaptive filters and many others.
+Most kernel algorithms are based on convex optimization or eigenproblems and are statistically well-founded. Typically, their statistical properties are analyzed using statistical learning theory (for example, using Rademacher complexity)."
+Structured support vector machine,"The structured support-vector machine is a machine learning algorithm that generalizes the Support-Vector Machine (SVM) classifier.  Whereas the SVM classifier supports binary classification, multiclass classification and regression, the structured SVM allows training of a classifier for general structured output labels.
+As an example, a sample instance might be a natural language sentence, and the output label is an annotated parse tree.  Training a classifier consists of showing pairs of correct sample and output label pairs.  After training, the structured SVM model allows one to predict for new sample instances the corresponding output label; that is, given a natural language sentence, the classifier can produce the most likely parse tree.
+
+"
+Relevance vector machine,"In mathematics, a Relevance Vector Machine (RVM) is a machine learning technique that uses Bayesian inference to obtain parsimonious solutions for regression and probabilistic classification.
+The RVM has an identical functional form to the support vector machine, but provides probabilistic classification.
+It is actually equivalent to a Gaussian process model with covariance function:
+
+  
+    
+      
+        k
+        (
+        
+          x
+        
+        ,
+        
+          
+            x
+            ′
+          
+        
+        )
+        =
+        
+          ∑
+          
+            j
+            =
+            1
+          
+          
+            N
+          
+        
+        
+          
+            1
+            
+              α
+              
+                j
+              
+            
+          
+        
+        φ
+        (
+        
+          x
+        
+        ,
+        
+          
+            x
+          
+          
+            j
+          
+        
+        )
+        φ
+        (
+        
+          
+            x
+          
+          ′
+        
+        ,
+        
+          
+            x
+          
+          
+            j
+          
+        
+        )
+      
+    
+    {\displaystyle k(\mathbf {x} ,\mathbf {x'} )=\sum _{j=1}^{N}{\frac {1}{\alpha _{j}}}\varphi (\mathbf {x} ,\mathbf {x} _{j})\varphi (\mathbf {x} ',\mathbf {x} _{j})}
+  where 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+   is the kernel function (usually Gaussian), 
+  
+    
+      
+        
+          α
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \alpha _{j}}
+   are the variances of the prior on the weight vector
+
+  
+    
+      
+        w
+        ∼
+        N
+        (
+        0
+        ,
+        
+          α
+          
+            −
+            1
+          
+        
+        I
+        )
+      
+    
+    {\displaystyle w\sim N(0,\alpha ^{-1}I)}
+  , and 
+  
+    
+      
+        
+          
+            x
+          
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          
+            x
+          
+          
+            N
+          
+        
+      
+    
+    {\displaystyle \mathbf {x} _{1},\ldots ,\mathbf {x} _{N}}
+   are the input vectors of the training set.Compared to that of support vector machines (SVM), the Bayesian formulation of the RVM avoids the set of free parameters of the SVM (that usually require cross-validation-based post-optimizations). However RVMs use an expectation maximization (EM)-like learning method and are therefore at risk of local minima. This is unlike the standard sequential minimal optimization (SMO)-based algorithms employed by SVMs, which are guaranteed to find a global optimum (of the convex problem).
+The relevance vector machine was patented in the United States by Microsoft (patent expired September 4, 2019)."
+Elastic net regularization,"In statistics and, in particular, in the fitting of linear or logistic regression models, the elastic net is a regularized regression method that linearly combines the L1 and L2 penalties of the lasso and ridge methods."
+Supervised learning,"Supervised learning (SL) is a machine learning paradigm for problems where the available data consists of labelled examples, meaning that each data point contains features (covariates) and an associated label. The goal of supervised learning algorithms is learning a function that maps feature vectors (inputs) to labels (output), based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. An optimal scenario will allow for the algorithm to correctly determine the class labels for unseen instances. This requires the learning algorithm to generalize from the training data to unseen situations in a ""reasonable"" way (see inductive bias). This statistical quality of an algorithm is measured through the so-called generalization error."
+Multiclass classification,"In machine learning and statistical classification, multiclass classification or multinomial classification is the problem of classifying instances into one of three or more classes (classifying instances into one of two classes is called binary classification).
+While many classification algorithms (notably multinomial logistic regression) naturally permit the use of more than two classes, some are by nature binary algorithms; these can, however, be turned into multinomial classifiers by a variety of strategies.
+Multiclass classification should not be confused with multi-label classification, where multiple labels are to be predicted for each instance.
+
+"
+Isabelle Guyon,"Isabelle Guyon (French pronunciation: ​[izabɛl ɡɥijɔ̃]; born August 15, 1961) is a French-born researcher in machine learning known for her work on support-vector machines, artificial neural networks and bioinformatics. She is a Chair Professor at the University of Paris-Saclay.She is considered to be a pioneer in the field, with her contribution to the support-vector machines with Vladimir Vapnik and Bernhard Boser."
+Radial basis function kernel,"In machine learning, the radial basis function kernel, or RBF kernel, is a popular kernel function used in various kernelized learning algorithms. In particular, it is commonly used in support vector machine classification.The RBF kernel on two samples 
+  
+    
+      
+        
+          x
+        
+        ∈
+        
+          
+            R
+          
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \mathbf {x} \in \mathbb {R} ^{k}}
+   and x', represented as feature vectors in some input space, is defined as
+
+  
+    
+      
+        K
+        (
+        
+          x
+        
+        ,
+        
+          
+            x
+            ′
+          
+        
+        )
+        =
+        exp
+        ⁡
+        
+          (
+          
+            −
+            
+              
+                
+                  ‖
+                  
+                    x
+                  
+                  −
+                  
+                    
+                      x
+                      ′
+                    
+                  
+                  
+                    ‖
+                    
+                      2
+                    
+                  
+                
+                
+                  2
+                  
+                    σ
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle K(\mathbf {x} ,\mathbf {x'} )=\exp \left(-{\frac {\|\mathbf {x} -\mathbf {x'} \|^{2}}{2\sigma ^{2}}}\right)}
+  
+  
+    
+      
+        
+          ‖
+          
+            x
+          
+          −
+          
+            
+              x
+              ′
+            
+          
+          
+            ‖
+            
+              2
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \|\mathbf {x} -\mathbf {x'} \|^{2}}
+   may be recognized as the squared Euclidean distance between the two feature vectors. 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+   is a free parameter. An equivalent definition involves a parameter 
+  
+    
+      
+        
+          γ
+          =
+          
+            
+              
+                1
+                
+                  2
+                  
+                    σ
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \gamma ={\tfrac {1}{2\sigma ^{2}}}}
+  :
+
+  
+    
+      
+        K
+        (
+        
+          x
+        
+        ,
+        
+          
+            x
+            ′
+          
+        
+        )
+        =
+        exp
+        ⁡
+        (
+        −
+        γ
+        ‖
+        
+          x
+        
+        −
+        
+          
+            x
+            ′
+          
+        
+        
+          ‖
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle K(\mathbf {x} ,\mathbf {x'} )=\exp(-\gamma \|\mathbf {x} -\mathbf {x'} \|^{2})}
+  Since the value of the RBF kernel decreases with distance and ranges between zero (in the limit) and one (when x = x'), it has a ready interpretation as a similarity measure.
+The feature space of the kernel has an infinite number of dimensions; for 
+  
+    
+      
+        σ
+        =
+        1
+      
+    
+    {\displaystyle \sigma =1}
+  , its expansion using the multinomial theorem is:
+
+  
+    
+      
+        
+          
+            
+              
+                exp
+                ⁡
+                
+                  (
+                  
+                    −
+                    
+                      
+                        1
+                        2
+                      
+                    
+                    ‖
+                    
+                      x
+                    
+                    −
+                    
+                      
+                        x
+                        ′
+                      
+                    
+                    
+                      ‖
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+              
+                
+                =
+                exp
+                ⁡
+                (
+                
+                  
+                    2
+                    2
+                  
+                
+                
+                  
+                    x
+                  
+                  
+                    ⊤
+                  
+                
+                
+                  
+                    x
+                    ′
+                  
+                
+                −
+                
+                  
+                    1
+                    2
+                  
+                
+                ‖
+                
+                  x
+                
+                
+                  ‖
+                  
+                    2
+                  
+                
+                −
+                
+                  
+                    1
+                    2
+                  
+                
+                ‖
+                
+                  
+                    x
+                    ′
+                  
+                
+                
+                  ‖
+                  
+                    2
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                exp
+                ⁡
+                (
+                
+                  
+                    x
+                  
+                  
+                    ⊤
+                  
+                
+                
+                  
+                    x
+                    ′
+                  
+                
+                )
+                exp
+                ⁡
+                (
+                −
+                
+                  
+                    1
+                    2
+                  
+                
+                ‖
+                
+                  x
+                
+                
+                  ‖
+                  
+                    2
+                  
+                
+                )
+                exp
+                ⁡
+                (
+                −
+                
+                  
+                    1
+                    2
+                  
+                
+                ‖
+                
+                  
+                    x
+                    ′
+                  
+                
+                
+                  ‖
+                  
+                    2
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    j
+                    =
+                    0
+                  
+                  
+                    ∞
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        
+                          x
+                        
+                        
+                          ⊤
+                        
+                      
+                      
+                        
+                          x
+                          ′
+                        
+                      
+                      
+                        )
+                        
+                          j
+                        
+                      
+                    
+                    
+                      j
+                      !
+                    
+                  
+                
+                exp
+                ⁡
+                
+                  (
+                  
+                    −
+                    
+                      
+                        1
+                        2
+                      
+                    
+                    ‖
+                    
+                      x
+                    
+                    
+                      ‖
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                exp
+                ⁡
+                
+                  (
+                  
+                    −
+                    
+                      
+                        1
+                        2
+                      
+                    
+                    ‖
+                    
+                      
+                        x
+                        ′
+                      
+                    
+                    
+                      ‖
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    j
+                    =
+                    0
+                  
+                  
+                    ∞
+                  
+                
+                
+                
+                  ∑
+                  
+                    
+                      n
+                      
+                        1
+                      
+                    
+                    +
+                    
+                      n
+                      
+                        2
+                      
+                    
+                    +
+                    ⋯
+                    +
+                    
+                      n
+                      
+                        k
+                      
+                    
+                    =
+                    j
+                  
+                
+                exp
+                ⁡
+                
+                  (
+                  
+                    −
+                    
+                      
+                        1
+                        2
+                      
+                    
+                    ‖
+                    
+                      x
+                    
+                    
+                      ‖
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                
+                  
+                    
+                      
+                        x
+                        
+                          1
+                        
+                        
+                          
+                            n
+                            
+                              1
+                            
+                          
+                        
+                      
+                      ⋯
+                      
+                        x
+                        
+                          k
+                        
+                        
+                          
+                            n
+                            
+                              k
+                            
+                          
+                        
+                      
+                    
+                    
+                      
+                        n
+                        
+                          1
+                        
+                      
+                      !
+                      ⋯
+                      
+                        n
+                        
+                          k
+                        
+                      
+                      !
+                    
+                  
+                
+                exp
+                ⁡
+                
+                  (
+                  
+                    −
+                    
+                      
+                        1
+                        2
+                      
+                    
+                    ‖
+                    
+                      
+                        x
+                        ′
+                      
+                    
+                    
+                      ‖
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                
+                  
+                    
+                      
+                        
+                          
+                            x
+                            ′
+                          
+                        
+                        
+                          1
+                        
+                        
+                          
+                            n
+                            
+                              1
+                            
+                          
+                        
+                      
+                      ⋯
+                      
+                        
+                          
+                            x
+                            ′
+                          
+                        
+                        
+                          k
+                        
+                        
+                          
+                            n
+                            
+                              k
+                            
+                          
+                        
+                      
+                    
+                    
+                      
+                        n
+                        
+                          1
+                        
+                      
+                      !
+                      ⋯
+                      
+                        n
+                        
+                          k
+                        
+                      
+                      !
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                ⟨
+                φ
+                (
+                
+                  x
+                
+                )
+                ,
+                φ
+                (
+                
+                  
+                    x
+                    ′
+                  
+                
+                )
+                ⟩
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{alignedat}{2}\exp \left(-{\frac {1}{2}}\|\mathbf {x} -\mathbf {x'} \|^{2}\right)&=\exp({\frac {2}{2}}\mathbf {x} ^{\top }\mathbf {x'} -{\frac {1}{2}}\|\mathbf {x} \|^{2}-{\frac {1}{2}}\|\mathbf {x'} \|^{2})\\&=\exp(\mathbf {x} ^{\top }\mathbf {x'} )\exp(-{\frac {1}{2}}\|\mathbf {x} \|^{2})\exp(-{\frac {1}{2}}\|\mathbf {x'} \|^{2})\\&=\sum _{j=0}^{\infty }{\frac {(\mathbf {x} ^{\top }\mathbf {x'} )^{j}}{j!}}\exp \left(-{\frac {1}{2}}\|\mathbf {x} \|^{2}\right)\exp \left(-{\frac {1}{2}}\|\mathbf {x'} \|^{2}\right)\\&=\sum _{j=0}^{\infty }\quad \sum _{n_{1}+n_{2}+\dots +n_{k}=j}\exp \left(-{\frac {1}{2}}\|\mathbf {x} \|^{2}\right){\frac {x_{1}^{n_{1}}\cdots x_{k}^{n_{k}}}{\sqrt {n_{1}!\cdots n_{k}!}}}\exp \left(-{\frac {1}{2}}\|\mathbf {x'} \|^{2}\right){\frac {{x'}_{1}^{n_{1}}\cdots {x'}_{k}^{n_{k}}}{\sqrt {n_{1}!\cdots n_{k}!}}}\\&=\langle \varphi (\mathbf {x} ),\varphi (\mathbf {x'} )\rangle \end{alignedat}}}
+  
+  
+    
+      
+        φ
+        (
+        
+          x
+        
+        )
+        =
+        exp
+        ⁡
+        
+          (
+          
+            −
+            
+              
+                1
+                2
+              
+            
+            ‖
+            
+              x
+            
+            
+              ‖
+              
+                2
+              
+            
+          
+          )
+        
+        
+          (
+          
+            
+              a
+              
+                
+                  l
+                  
+                    0
+                  
+                
+              
+              
+                (
+                0
+                )
+              
+            
+            ,
+            
+              a
+              
+                1
+              
+              
+                (
+                1
+                )
+              
+            
+            ,
+            …
+            ,
+            
+              a
+              
+                
+                  l
+                  
+                    1
+                  
+                
+              
+              
+                (
+                1
+                )
+              
+            
+            ,
+            …
+            ,
+            
+              a
+              
+                1
+              
+              
+                (
+                j
+                )
+              
+            
+            ,
+            …
+            ,
+            
+              a
+              
+                
+                  l
+                  
+                    j
+                  
+                
+              
+              
+                (
+                j
+                )
+              
+            
+            ,
+            …
+          
+          )
+        
+      
+    
+    {\displaystyle \varphi (\mathbf {x} )=\exp \left(-{\frac {1}{2}}\|\mathbf {x} \|^{2}\right)\left(a_{l_{0}}^{(0)},a_{1}^{(1)},\dots ,a_{l_{1}}^{(1)},\dots ,a_{1}^{(j)},\dots ,a_{l_{j}}^{(j)},\dots \right)}
+  where 
+  
+    
+      
+        
+          l
+          
+            j
+          
+        
+        =
+        
+          
+            
+              
+                (
+              
+              
+                
+                  k
+                  +
+                  j
+                  −
+                  1
+                
+                j
+              
+              
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle l_{j}={\tbinom {k+j-1}{j}}}
+  ,
+
+  
+    
+      
+        
+          a
+          
+            l
+          
+          
+            (
+            j
+            )
+          
+        
+        =
+        
+          
+            
+              
+                x
+                
+                  1
+                
+                
+                  
+                    n
+                    
+                      1
+                    
+                  
+                
+              
+              ⋯
+              
+                x
+                
+                  k
+                
+                
+                  
+                    n
+                    
+                      k
+                    
+                  
+                
+              
+            
+            
+              
+                n
+                
+                  1
+                
+              
+              !
+              ⋯
+              
+                n
+                
+                  k
+                
+              
+              !
+            
+          
+        
+        
+        
+          |
+        
+        
+        
+          n
+          
+            1
+          
+        
+        +
+        
+          n
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          n
+          
+            k
+          
+        
+        =
+        j
+        ∧
+        1
+        ≤
+        l
+        ≤
+        
+          l
+          
+            j
+          
+        
+      
+    
+    {\displaystyle a_{l}^{(j)}={\frac {x_{1}^{n_{1}}\cdots x_{k}^{n_{k}}}{\sqrt {n_{1}!\cdots n_{k}!}}}\quad |\quad n_{1}+n_{2}+\dots +n_{k}=j\wedge 1\leq l\leq l_{j}}"
+classifier effectiveness,"In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. Developed at AT&T Bell Laboratories by Vladimir Vapnik with colleagues (Boser et al., 1992, Guyon et al., 1993, Cortes and Vapnik, 1995, Vapnik et al., 1997) SVMs are one of the most robust prediction methods, being based on statistical learning frameworks or VC theory proposed by Vapnik (1982, 1995) and Chervonenkis (1974). Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). SVM maps training examples to points in space so as to maximise the width of the gap between the two categories. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
+When data are unlabelled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The support vector clustering algorithm, created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data."
+Support vector machine,"In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. Developed at AT&T Bell Laboratories by Vladimir Vapnik with colleagues (Boser et al., 1992, Guyon et al., 1993, Cortes and Vapnik, 1995, Vapnik et al., 1997) SVMs are one of the most robust prediction methods, being based on statistical learning frameworks or VC theory proposed by Vapnik (1982, 1995) and Chervonenkis (1974). Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). SVM maps training examples to points in space so as to maximise the width of the gap between the two categories. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
+When data are unlabelled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The support vector clustering algorithm, created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data."
+Ensemble learning,"In statistics and machine learning, ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone.
+Unlike a statistical ensemble in statistical mechanics, which is usually infinite, a machine learning ensemble consists of only a concrete finite set of alternative models, but typically allows for much more flexible structure to exist among those alternatives."
+Bristol stool scale,"The Bristol stool scale is a diagnostic medical tool designed to classify the form of human faeces into seven categories. It is used in both clinical and experimental fields.It was developed at the Bristol Royal Infirmary as a clinical assessment tool in 1997, and is widely used as a research tool to evaluate the effectiveness of treatments for various diseases of the bowel, as well as a clinical communication aid; including being part of the diagnostic triad for irritable bowel syndrome."
+Margin classifier,"In machine learning, a margin classifier is a classifier which is able to give an associated distance from the decision boundary for each example.  For instance, if a linear classifier (e.g. perceptron or linear discriminant analysis) is used, the distance (typically euclidean distance, though others may be used) of an example from the separating hyperplane is the margin of that example.
+The notion of margin is important in several machine learning classification algorithms, as it can be used to bound the generalization error of the classifier.  These bounds are frequently shown using the VC dimension.  Of particular prominence is the generalization error bound on boosting algorithms and support vector machines."
+Data classification (business intelligence),"In business intelligence, data classification has close ties to data clustering, but where data clustering is descriptive, data classification is predictive. In essence data classification consists of using variables with known values to predict the unknown or future values of other variables. It can be used in e.g. direct marketing, insurance fraud detection or medical diagnosis.The first step in doing a data classification is to cluster the data set used for category training, to create the wanted number of categories. An algorithm, called the classifier, is then used on the categories, creating a descriptive model for each. These models can then be used to categorize new items in the created classification system."
+F-score,"In statistical analysis of binary classification, the F-score or F-measure is a measure of a test's accuracy. It is calculated from the precision and recall of the test, where the precision is the number of true positive results divided by the number of all positive results, including those not identified correctly, and the recall is the number of true positive results divided by the number of all samples that should have been identified as positive. Precision is also known as positive predictive value, and recall is also known as sensitivity in diagnostic binary classification. 
+The F1 score is the harmonic mean of the precision and recall. The more generic 
+  
+    
+      
+        
+          F
+          
+            β
+          
+        
+      
+    
+    {\displaystyle F_{\beta }}
+   score applies additional weights, valuing one of precision or recall more than the other.
+The highest possible value of an F-score is 1.0, indicating perfect precision and recall, and the lowest possible value is 0, if either precision or recall are zero."
+Search engine optimization,"Search engine optimization (SEO) is the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as ""natural"" or ""organic"" results) rather than direct traffic or paid traffic. Unpaid traffic may originate from different kinds of searches, including image search, video search, academic search, news search, and industry-specific vertical search engines. 
+As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page (SERP). These visitors can then potentially be converted into customers."
+Paleontology,"Paleontology (), also spelled palaeontology or palæontology, is the scientific study of life that existed prior to, and sometimes including, the start of the Holocene epoch (roughly 11,700 years before present). It includes the study of fossils to classify organisms and study their interactions with each other and their environments (their paleoecology). Paleontological observations have been documented as far back as the 5th century BC. The science became established in the 18th century as a result of Georges Cuvier's work on comparative anatomy, and developed rapidly in the 19th century. The term itself originates from Greek παλαιός ('palaios', ""old, ancient""), ὄν ('on', (gen. 'ontos'), ""being, creature""), and λόγος ('logos', ""speech, thought, study"").Paleontology lies on the border between biology and geology, but differs from archaeology in that it excludes the study of anatomically modern humans. It now uses techniques drawn from a wide range of sciences, including biochemistry, mathematics, and engineering. Use of all these techniques has enabled paleontologists to discover much of the evolutionary history of life, almost all the way back to when Earth became capable of supporting life, nearly 4 billion years ago. As knowledge has increased, paleontology has developed specialised sub-divisions, some of which focus on different types of fossil organisms while others study ecology and environmental history, such as ancient climates.
+Body fossils and trace fossils are the principal types of evidence about ancient life, and geochemical evidence has helped to decipher the evolution of life before there were organisms large enough to leave body fossils. Estimating the dates of these remains is essential but difficult: sometimes adjacent rock layers allow radiometric dating, which provides absolute dates that are accurate to within 0.5%, but more often paleontologists have to rely on relative dating by solving the ""jigsaw puzzles"" of biostratigraphy (arrangement of rock layers from youngest to oldest). Classifying ancient organisms is also difficult, as many do not fit well into the Linnaean taxonomy classifying living organisms, and paleontologists more often use cladistics to draw up evolutionary ""family trees"". The final quarter of the 20th century saw the development of molecular phylogenetics, which investigates how closely organisms are related by measuring the similarity of the DNA in their genomes. Molecular phylogenetics has also been used to estimate the dates when species diverged, but there is controversy about the reliability of the molecular clock on which such estimates depend."
+Precision and recall,"In pattern recognition, information retrieval, object detection and classification (machine learning), precision and recall are performance metrics that apply to data retrieved from a collection, corpus or sample space.
+Precision (also called positive predictive value) is the fraction of relevant instances among the retrieved instances, while recall (also known as sensitivity) is the fraction of relevant instances that were retrieved. Both precision and recall are therefore based on relevance.
+Consider a computer program for recognizing dogs (the relevant element) in a digital photograph. Upon processing a picture which contains ten cats and twelve dogs, the program identifies eight dogs. Of the eight elements identified as dogs, only five actually are dogs (true positives), while the other three are cats (false positives). Seven dogs were missed (false negatives), and seven cats were correctly excluded (true negatives). The program's precision is then 5/8 (true positives / selected elements) while its recall is 5/12 (true positives / relevant elements).
+When a search engine returns 30 pages, only 20 of which are relevant, while failing to return 40 additional relevant pages, its precision is 20/30 = 2/3, which tells us how valid the results are, while its recall is 20/60 = 1/3, which tells us how complete the results are.
+Adopting a hypothesis-testing approach from statistics, in which, in this case, the null hypothesis is that a given item is irrelevant, i.e., not a dog, absence of type I and type II errors (i.e. perfect specificity and sensitivity of 100% each) corresponds respectively to perfect precision (no false positive) and perfect recall (no false negative).  
+More generally, recall is simply the complement of the type II error rate, i.e. one minus the type II error rate. Precision is related to the type I error rate, but in a slightly more complicated way, as it also depends upon the prior distribution of seeing a relevant vs an irrelevant item.
+The above cat and dog example contained 8 − 5 = 3 type I errors (false positives) out of 10 total cats (true negatives), for a type I error rate of 3/10, and 12 − 5 = 7 type II errors, for a type II error rate of 7/12.  Precision can be seen as a measure of quality, and recall as a measure of quantity. 
+Higher precision means that an algorithm returns more relevant results than irrelevant ones, and high recall means that an algorithm returns most of the relevant results (whether or not irrelevant ones are also returned)."
+ATEX directive,"The ATEX directives are two EU directives describing the minimum safety requirements for workplaces and equipment used in explosive atmospheres. The name is an initialization of the French term Appareils destinés à être utilisés en ATmosphères EXplosibles (French for ""Equipment intended for use in explosive atmospheres"")."
+boosted decision trees,"Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees; it usually outperforms random forest. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function."
+Gradient boosting,"Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees; it usually outperforms random forest. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function."
+decision boundary,"In a statistical-classification problem with two classes, a decision boundary or decision surface is a hypersurface that partitions the underlying vector space into two sets, one for each class. The classifier will classify all the points on one side of the decision boundary as belonging to one class and all those on the other side as belonging to the other class.
+A decision boundary is the region of a problem space in which the output label of a classifier is ambiguous.If the decision surface is a hyperplane, then the classification problem is linear, and the classes are linearly separable.
+Decision boundaries are not always clear cut. That is, the transition from one class in the feature space to another is not discontinuous, but gradual. This effect is common in fuzzy logic based classification algorithms, where membership in one class or another is ambiguous.
+Decision boundaries can be approximations of optimal stopping boundaries.  The decision boundary is the set of points of that hyperplane that pass through zero.  For example, the angle between a vector and points in a set must be zero for points that are on or close to the decision boundary. Decision boundary instability can be incorporated with generalization error as a standard for selecting the most accurate and stable classifier."
+Decision boundary,"In a statistical-classification problem with two classes, a decision boundary or decision surface is a hypersurface that partitions the underlying vector space into two sets, one for each class. The classifier will classify all the points on one side of the decision boundary as belonging to one class and all those on the other side as belonging to the other class.
+A decision boundary is the region of a problem space in which the output label of a classifier is ambiguous.If the decision surface is a hyperplane, then the classification problem is linear, and the classes are linearly separable.
+Decision boundaries are not always clear cut. That is, the transition from one class in the feature space to another is not discontinuous, but gradual. This effect is common in fuzzy logic based classification algorithms, where membership in one class or another is ambiguous.
+Decision boundaries can be approximations of optimal stopping boundaries.  The decision boundary is the set of points of that hyperplane that pass through zero.  For example, the angle between a vector and points in a set must be zero for points that are on or close to the decision boundary. Decision boundary instability can be incorporated with generalization error as a standard for selecting the most accurate and stable classifier."
+K-nearest neighbors algorithm,"In statistics, the k-nearest neighbors algorithm (k-NN) is a non-parametric supervised learning method first developed by Evelyn Fix and Joseph Hodges in 1951, and later expanded by Thomas Cover. It is used for classification and regression. In both cases, the input consists of the k closest training examples in a data set. The output depends on whether k-NN is used for classification or regression:
+
+In k-NN classification, the output is a class membership. An object is classified by a plurality vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors (k is a positive integer, typically small). If k = 1, then the object is simply assigned to the class of that single nearest neighbor.In k-NN regression, the output is the property value for the object. This value is the average of the values of k nearest neighbors.k-NN is a type of classification where the function is only approximated locally and all computation is deferred until function evaluation. Since this algorithm relies on distance for classification, if the features represent different physical units or come in vastly different scales then normalizing the training data can improve its accuracy dramatically.Both for classification and regression, a useful technique can be to assign weights to the contributions of the neighbors, so that the nearer neighbors contribute more to the average than the more distant ones. For example, a common weighting scheme consists in giving each neighbor a weight of 1/d, where d is the distance to the neighbor.The neighbors are taken from a set of objects for which the class (for k-NN classification) or the object property value (for k-NN regression) is known. This can be thought of as the training set for the algorithm, though no explicit training step is required.
+A peculiarity of the k-NN algorithm is that it is sensitive to the local structure of the data."
+Weak supervision,"Weak supervision is a branch of machine learning where noisy, limited, or imprecise sources are used to provide supervision signal for labeling large amounts of training data in a supervised learning setting. This approach alleviates the burden of obtaining hand-labeled data sets, which can be costly or impractical. Instead, inexpensive weak labels are employed with the understanding that they are imperfect, but can nonetheless be used to create a strong predictive model."
+Perceptron,"In machine learning, the perceptron (or McCulloch-Pitts neuron) is an algorithm for supervised learning of binary classifiers.  A binary classifier is a function which can decide whether or not an input, represented by a vector of numbers, belongs to some specific class.  It is a type of linear classifier, i.e. a classification algorithm that makes its predictions based on a linear predictor function combining a set of weights with the feature vector."
+Quantization (signal processing),"Quantization, in mathematics and digital signal processing, is the process of mapping input values from a large set (often a continuous set) to output values in a (countable) smaller set, often with a finite number of elements.  Rounding and truncation are typical examples of quantization processes.  Quantization is involved to some degree in nearly all digital signal processing, as the process of representing a signal in digital form ordinarily involves rounding.  Quantization also forms the core of essentially all lossy compression algorithms.
+The difference between an input value and its quantized value (such as round-off error) is referred to as quantization error.  A device or algorithmic function that performs quantization is called a quantizer.  An analog-to-digital converter is an example of a quantizer."
+Hyperplane,"In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space.  For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.  This notion can be used in any general space in which the concept of the dimension of a subspace is defined.
+In different settings, hyperplanes may have different properties.  For instance, a hyperplane of an n-dimensional affine space is a flat subset with dimension n − 1 and it separates the space into two half spaces. While a hyperplane of an n-dimensional projective space does not have this property.
+The difference in dimension between a subspace S and its ambient space X is known as the codimension of S with respect to X.  Therefore, a necessary and sufficient condition for S to be a hyperplane in X is for S to have codimension one in X.
+
+"
+Kernel method,"In machine learning, kernel machines are a class of algorithms for pattern analysis, whose best known member is the support-vector machine (SVM). The general task of pattern analysis is to find and study general types of relations (for example clusters, rankings, principal components, correlations, classifications) in datasets. For many algorithms that solve these tasks, the data in raw representation have to be explicitly transformed into feature vector representations via a user-specified feature map: in contrast, kernel methods require only a user-specified kernel, i.e., a similarity function over all pairs of data points computed using Inner products. The feature map in kernel machines is infinite dimensional but only requires a finite dimensional matrix from user-input according to the Representer theorem. Kernel machines are slow to compute for datasets larger than a couple of thousand examples without parallel processing. 
+Kernel methods  owe their name to the use of kernel functions, which enable them to operate in a high-dimensional, implicit feature space without ever computing the coordinates of the data in that space, but rather by simply computing the inner products between the images of all pairs of data in the feature space.  This operation is often computationally cheaper than the explicit computation of the coordinates.  This approach is called the ""kernel trick"". Kernel functions have been introduced for sequence data, graphs, text, images, as well as vectors.
+Algorithms capable of operating with kernels include the kernel perceptron, support-vector machines (SVM), Gaussian processes, principal components analysis (PCA), canonical correlation analysis, ridge regression, spectral clustering, linear adaptive filters and many others.
+Most kernel algorithms are based on convex optimization or eigenproblems and are statistically well-founded. Typically, their statistical properties are analyzed using statistical learning theory (for example, using Rademacher complexity)."
+machine learning methods,"Machine learning (ML) is a field of inquiry devoted to understanding and building methods that 'learn', that is, methods that leverage data to improve performance on some set of tasks. It is seen as a part of artificial intelligence. Machine learning algorithms build a model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as in medicine, email filtering, speech recognition, agriculture, and computer vision, where it is difficult or unfeasible to develop conventional algorithms to perform the needed tasks. 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers, but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. Some implementations of machine learning use data and neural networks in a way that mimics the working of a biological brain.  In its application across business problems, machine learning is also referred to as predictive analytics."
+flat clustering,"Document clustering (or text clustering) is the application of cluster analysis to textual documents. It has applications in automatic document organization, topic extraction and fast information retrieval or filtering."
+Document clustering,"Document clustering (or text clustering) is the application of cluster analysis to textual documents. It has applications in automatic document organization, topic extraction and fast information retrieval or filtering."
+Chinese whispers (clustering method),"Chinese whispers is a clustering method used in network science named after the famous whispering game. Clustering methods are basically used to identify communities of nodes or links in a given network. This algorithm was designed by Chris Biemann and Sven Teresniak in 2005. The name comes from the fact that the process can be modeled as a separation of communities where the nodes send the same type of information to each other.Chinese whispers is a hard partitioning, randomized, flat clustering (no hierarchical relations between clusters) method. The random property means that running the process on the same network several times can lead to different results, while because of hard partitioning one node can only belong to one cluster at a given moment.  The original algorithm is applicable to undirected, weighted and unweighted graphs. Chinese whispers is time linear which means that it is extremely fast even if the number of nodes and links are very high in the network.
+
+"
+K-means clustering,"k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells. k-means clustering minimizes within-cluster variances (squared Euclidean distances), but not regular Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared errors, whereas only the geometric median minimizes Euclidean distances. For instance, better Euclidean solutions can be found using k-medians and k-medoids.
+The problem is computationally difficult (NP-hard); however, efficient heuristic algorithms converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. They both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the Gaussian mixture model allows clusters to have different shapes.
+The unsupervised k-means algorithm has a loose relationship to the k-nearest neighbor classifier, a popular supervised machine learning technique for classification that is often confused with k-means due to the name. Applying the 1-nearest neighbor classifier to the cluster centers obtained by k-means classifies new data into the existing clusters. This is known as nearest centroid classifier or Rocchio algorithm.
+
+"
+cluster hypothesis,"In machine learning and information retrieval, the cluster hypothesis is an assumption about the nature of the data handled in those fields, which takes various forms. In information retrieval, it states that documents that are clustered together ""behave similarly with respect to relevance to information needs"". In terms of classification, it states that if points are in the same cluster, they are likely to be of the same class. There may be multiple clusters forming a single class."
+Cluster hypothesis,"In machine learning and information retrieval, the cluster hypothesis is an assumption about the nature of the data handled in those fields, which takes various forms. In information retrieval, it states that documents that are clustered together ""behave similarly with respect to relevance to information needs"". In terms of classification, it states that if points are in the same cluster, they are likely to be of the same class. There may be multiple clusters forming a single class."
+Relevance (information retrieval),"In information science and information retrieval, relevance denotes how well a retrieved document or set of documents meets the information need of the user. Relevance may include concerns such as timeliness, authority or novelty of the result."
+Null hypothesis,"In scientific research, the null hypothesis (often denoted H0) is the claim that no difference or relationship exists between two sets of data or variables being analyzed. The null hypothesis is that any experimentally observed difference is due to chance alone, and an underlying causative relationship does not exist, hence the term ""null"". In addition to the null hypothesis, an alternative hypothesis is also developed, which claims that a relationship does exist between two variables."
+Nearest centroid classifier,"In machine learning, a nearest centroid classifier or nearest prototype classifier is a classification model that assigns to observations the label of the class of training samples whose mean (centroid) is closest to the observation. When applied to text classification using word vectors containing tf*idf weights to represent documents, the nearest centroid classifier is known as the Rocchio classifier because of its similarity to the Rocchio algorithm for relevance feedback.An extended version of the nearest centroid classifier has found applications in the medical domain, specifically classification of tumors."
+Statistical hypothesis testing,"A statistical hypothesis test is a method of statistical inference used to decide whether the data at hand sufficiently support a particular hypothesis.
+Hypothesis testing allows us to make probabilistic statements about population parameters."
+objective functions,"In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function)  is a function that maps an event or values of one or more variables onto a real number intuitively representing some ""cost"" associated with the event. An optimization problem seeks to minimize a loss function. An objective function is either a loss function or its opposite (in specific domains, variously called a reward function, a profit function, a utility function, a fitness function, etc.), in which case it is to be maximized. The loss function could include terms from several levels of the hierarchy.
+In statistics, typically a  loss function is used for parameter estimation, and the event in question is some function of the difference between estimated and true values for an instance of data. The concept, as old as Laplace, was reintroduced in statistics by Abraham Wald in the middle of the 20th century.  In the context of economics, for example, this is usually economic cost or regret.  In classification, it is the penalty for an incorrect classification of an example. In actuarial science, it is used in an insurance context to model benefits paid over premiums, particularly since the works of Harald Cramér in the 1920s. In optimal control, the loss is the penalty for failing to achieve a desired value. In financial risk management, the function is mapped to a monetary loss."
+Loss function,"In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function)  is a function that maps an event or values of one or more variables onto a real number intuitively representing some ""cost"" associated with the event. An optimization problem seeks to minimize a loss function. An objective function is either a loss function or its opposite (in specific domains, variously called a reward function, a profit function, a utility function, a fitness function, etc.), in which case it is to be maximized. The loss function could include terms from several levels of the hierarchy.
+In statistics, typically a  loss function is used for parameter estimation, and the event in question is some function of the difference between estimated and true values for an instance of data. The concept, as old as Laplace, was reintroduced in statistics by Abraham Wald in the middle of the 20th century.  In the context of economics, for example, this is usually economic cost or regret.  In classification, it is the penalty for an incorrect classification of an example. In actuarial science, it is used in an insurance context to model benefits paid over premiums, particularly since the works of Harald Cramér in the 1920s. In optimal control, the loss is the penalty for failing to achieve a desired value. In financial risk management, the function is mapped to a monetary loss."
+Test functions for optimization,"In applied mathematics, test functions, known as artificial landscapes, are useful to evaluate characteristics of optimization algorithms, such as:
+
+Convergence rate.
+Precision.
+Robustness.
+General performance.Here some test functions are presented with the aim of giving an idea about the different situations that optimization algorithms have to face when coping with these kinds of problems. In the first part, some objective functions for single-objective optimization cases are presented. In the second part, test functions with their respective Pareto fronts for multi-objective optimization problems (MOP) are given.
+The artificial landscapes presented herein for single-objective optimization problems are taken from Bäck, Haupt et al. and from Rody Oldenhuis software. Given the number of problems (55 in total), just a few are presented here.
+The test functions used to evaluate the algorithms for MOP were taken from Deb, Binh et al. and Binh. The software developed by Deb can be downloaded, which implements the NSGA-II procedure with GAs, or the program posted on Internet, which implements the NSGA-II procedure with ES.
+Just a general form of the equation, a plot of the objective function, boundaries of the object variables and the coordinates of global minima are given herein."
+Multi-objective optimization,"Multi-objective optimization (also known as multi-objective programming, vector optimization, multicriteria optimization, multiattribute optimization or Pareto optimization) is an area of multiple criteria decision making that is concerned with mathematical optimization problems involving more than one objective function to be optimized simultaneously. Multi-objective optimization has been applied in many fields of science, including engineering, economics and logistics where optimal decisions need to be taken in the presence of trade-offs between two or more conflicting objectives. Minimizing cost while maximizing comfort while buying a car, and maximizing performance whilst minimizing fuel consumption and emission of pollutants of a vehicle are examples of multi-objective optimization problems involving two and three objectives, respectively. In practical problems, there can be more than three objectives.
+For a nontrivial multi-objective optimization problem, no single solution exists that simultaneously optimizes each objective. In that case, the objective functions are said to be conflicting. A solution is called nondominated, Pareto optimal, Pareto efficient or noninferior, if none of the objective functions can be improved in value without degrading some of the other objective values. Without additional subjective preference information, there may exist a (possibly infinite) number of Pareto optimal solutions, all of which are considered equally good. Researchers study multi-objective optimization problems from different viewpoints and, thus, there exist different solution philosophies and goals when setting and solving them. The goal may be to find a representative set of Pareto optimal solutions, and/or quantify the trade-offs in satisfying the different objectives, and/or finding a single solution that satisfies the subjective preferences of a human decision maker (DM).
+Bicriteria optimization denotes the special case in which there are two objective functions."
+Production (economics),"Production is the process of combining various inputs, both material (such as metal, wood, glass, or plastics) and immaterial (such as plans, or knowledge) in order to create output. Ideally this output will be a good or service which has value and contributes to the utility of individuals. The area of economics that focuses on production is called production theory, and it is closely related to the consumption (or consumer) theory of economics.
+
+The production process and output directly result from productively utilising the original inputs (or factors of production). Known as primary producer goods or services, land, labour, and capital are deemed the three fundamental production factors. These primary inputs are not significantly altered in the output process, nor do they become a whole component in the product. Under classical economics, materials and energy are categorised as secondary factors as they are byproducts of land, labour and capital. Delving further, primary factors encompass all of the resourcing involved, such as land, which includes the natural resources above and below the soil. However, there is a difference in human capital and labour. In addition to the common factors of production, in different economic schools of thought, entrepreneurship and technology are sometimes considered evolved factors in production. It is common practice that several forms of controllable inputs are used to achieve the output of a product. The production function assesses the relationship between the inputs and the quantity of output.Economic well-being is created in a production process, meaning all economic activities that aim directly or indirectly to satisfy human wants and needs. The degree to which the needs are satisfied is often accepted as a measure of economic well-being. In production there are two features which explain increasing economic well-being. They are improving quality-price-ratio of goods and services and increasing incomes from growing and more efficient market production or total production which help in increasing GDP.
+The most important forms of production are:
+
+market production
+public production
+household productionIn order to understand the origin of economic well-being, we must understand these three production processes. All of them produce commodities which have value and contribute to the well-being of individuals.
+The satisfaction of needs originates from the use of the commodities which are produced. The need satisfaction increases when the quality-price-ratio of the commodities improves and more satisfaction is achieved at less cost. Improving the quality-price-ratio of commodities is to a producer an essential way to improve the competitiveness of products but this kind of gains distributed to customers cannot be measured with production data. Improving the competitiveness of products means often to the producer lower product prices and therefore losses in incomes which are to be compensated with the growth of sales volume.
+Economic well-being also increases due to the growth of incomes that are gained from the growing and more efficient market production. Market production is the only production form that creates and distributes incomes to stakeholders. Public production and household production are financed by the incomes generated in market production. Thus market production has a double role in creating well-being, i.e. the role of producing goods and services and the role of creating income. Because of this double role, market production is the “primus motor” of economic well-being and therefore here under review."
+Mathematical optimization,"Mathematical optimization (alternatively spelled optimisation) or mathematical programming is the selection of a best element, with regard to some criterion, from some set of available alternatives. It is generally divided into two subfields: discrete optimization and continuous optimization. Optimization problems of sorts arise in all quantitative disciplines from computer science and engineering to operations research and economics, and the development of solution methods has been of interest in mathematics for centuries.In the more general approach, an optimization problem consists of maximizing or minimizing a real function by systematically choosing input values from within an allowed set and computing the value of the function. The generalization of optimization theory and techniques to other formulations constitutes a large area of applied mathematics. More generally, optimization includes finding ""best available"" values of some objective function given a defined domain (or input), including a variety of different types of objective functions and different types of domains."
+Linear programming,"Linear programming (LP), also called linear optimization, is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of mathematical programming (also known as mathematical optimization).
+More formally, linear programming is a technique for the optimization of a linear objective function, subject to linear equality and linear inequality constraints. Its feasible region is a convex polytope, which is a set defined as the intersection of finitely many half spaces, each of which is defined by a linear inequality. Its objective function is a real-valued affine (linear) function defined on this polyhedron. A linear programming algorithm finds a point in the polytope where this function has the smallest (or largest) value if such a point exists.
+Linear programs are problems that can be expressed in canonical form as
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                  Find a vector
+                
+              
+              
+              
+                
+                  x
+                
+              
+            
+            
+              
+              
+                
+                  that maximizes
+                
+              
+              
+              
+                
+                  
+                    c
+                  
+                  
+                    T
+                  
+                
+                
+                  x
+                
+              
+            
+            
+              
+              
+                
+                  subject to
+                
+              
+              
+              
+                A
+                
+                  x
+                
+                ≤
+                
+                  b
+                
+              
+            
+            
+              
+              
+                
+                  and
+                
+              
+              
+              
+                
+                  x
+                
+                ≥
+                
+                  0
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&{\text{Find a vector}}&&\mathbf {x} \\&{\text{that maximizes}}&&\mathbf {c} ^{T}\mathbf {x} \\&{\text{subject to}}&&A\mathbf {x} \leq \mathbf {b} \\&{\text{and}}&&\mathbf {x} \geq \mathbf {0} .\end{aligned}}}
+  Here the components of x are the variables to be determined, c and b are given vectors (with 
+  
+    
+      
+        
+          
+            c
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle \mathbf {c} ^{T}}
+   indicating that the coefficients of c are used as a single-row matrix for the purpose of forming the matrix product), and A is a given matrix. The function whose value is to be maximized or minimized (
+  
+    
+      
+        
+          x
+        
+        ↦
+        
+          
+            c
+          
+          
+            T
+          
+        
+        
+          x
+        
+      
+    
+    {\displaystyle \mathbf {x} \mapsto \mathbf {c} ^{T}\mathbf {x} }
+   in this case) is called the objective function. The inequalities Ax ≤ b and x ≥ 0 are the constraints which specify a convex polytope over which the objective function is to be optimized. In this context, two vectors are comparable when they have the same dimensions. If every entry in the first is less-than or equal-to the corresponding entry in the second, then it can be said that the first vector is less-than or equal-to the second vector.
+Linear programming can be applied to various fields of study. It is widely used in mathematics and, to a lesser extent, in business, economics, and some engineering problems. Industries that use linear programming models include transportation, energy, telecommunications, and manufacturing. It has proven useful in modeling diverse types of problems in planning, routing, scheduling, assignment, and design."
+flat clustering algorithm,"k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells. k-means clustering minimizes within-cluster variances (squared Euclidean distances), but not regular Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared errors, whereas only the geometric median minimizes Euclidean distances. For instance, better Euclidean solutions can be found using k-medians and k-medoids.
+The problem is computationally difficult (NP-hard); however, efficient heuristic algorithms converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. They both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the Gaussian mixture model allows clusters to have different shapes.
+The unsupervised k-means algorithm has a loose relationship to the k-nearest neighbor classifier, a popular supervised machine learning technique for classification that is often confused with k-means due to the name. Applying the 1-nearest neighbor classifier to the cluster centers obtained by k-means classifies new data into the existing clusters. This is known as nearest centroid classifier or Rocchio algorithm.
+
+"
+K-means clustering,"k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells. k-means clustering minimizes within-cluster variances (squared Euclidean distances), but not regular Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared errors, whereas only the geometric median minimizes Euclidean distances. For instance, better Euclidean solutions can be found using k-medians and k-medoids.
+The problem is computationally difficult (NP-hard); however, efficient heuristic algorithms converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. They both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the Gaussian mixture model allows clusters to have different shapes.
+The unsupervised k-means algorithm has a loose relationship to the k-nearest neighbor classifier, a popular supervised machine learning technique for classification that is often confused with k-means due to the name. Applying the 1-nearest neighbor classifier to the cluster centers obtained by k-means classifies new data into the existing clusters. This is known as nearest centroid classifier or Rocchio algorithm.
+
+"
+Expectation–maximization algorithm,"In statistics, an expectation–maximization (EM) algorithm is an iterative method to find (local) maximum likelihood or maximum a posteriori (MAP) estimates of parameters in statistical models, where the model depends on unobserved latent variables. The EM iteration alternates between performing an expectation (E) step, which creates a function for the expectation of the log-likelihood evaluated using the current estimate for the parameters, and a maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the E step. These parameter-estimates are then used to determine the distribution of the latent variables in the next E step."
+Chinese whispers (clustering method),"Chinese whispers is a clustering method used in network science named after the famous whispering game. Clustering methods are basically used to identify communities of nodes or links in a given network. This algorithm was designed by Chris Biemann and Sven Teresniak in 2005. The name comes from the fact that the process can be modeled as a separation of communities where the nodes send the same type of information to each other.Chinese whispers is a hard partitioning, randomized, flat clustering (no hierarchical relations between clusters) method. The random property means that running the process on the same network several times can lead to different results, while because of hard partitioning one node can only belong to one cluster at a given moment.  The original algorithm is applicable to undirected, weighted and unweighted graphs. Chinese whispers is time linear which means that it is extremely fast even if the number of nodes and links are very high in the network.
+
+"
+Consensus clustering,"Consensus clustering is a method of aggregating (potentially conflicting) results from multiple clustering algorithms. Also called cluster ensembles or aggregation of clustering (or partitions), it refers to the situation in which a number of different (input) clusterings have been obtained for a particular dataset and it is desired to find a single (consensus) clustering which is a better fit in some sense than the existing clusterings. Consensus clustering is thus the problem of reconciling clustering information about the same data set coming from different sources or from different runs of the same algorithm. When cast as an optimization problem, consensus clustering is known as median partition, and has been shown to be NP-complete, even when the number of input clusterings is three. Consensus clustering for unsupervised learning is analogous to ensemble learning in supervised learning."
+Document clustering,"Document clustering (or text clustering) is the application of cluster analysis to textual documents. It has applications in automatic document organization, topic extraction and fast information retrieval or filtering."
+model-based clustering,"Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). It is a main task of exploratory data analysis, and a common technique for statistical data analysis, used in many fields, including pattern recognition, image analysis, information retrieval, bioinformatics, data compression, computer graphics and machine learning.
+Cluster analysis itself is not one specific algorithm, but the general task to be solved. It can be achieved by various algorithms that differ significantly in their understanding of what constitutes a cluster and how to efficiently find them. Popular notions of clusters include groups with small distances between cluster members, dense areas of the data space, intervals or particular statistical distributions. Clustering can therefore be formulated as a multi-objective optimization problem. The appropriate clustering algorithm and parameter settings (including parameters such as the distance function to use, a density threshold or the number of expected clusters) depend on the individual data set and intended use of the results. Cluster analysis as such is not an automatic task, but an iterative process of knowledge discovery or interactive multi-objective optimization that involves trial and failure. It is often necessary to modify data preprocessing and model parameters until the result achieves the desired properties.
+Besides the term clustering, there is a number of terms with similar meanings, including automatic classification, numerical taxonomy, botryology (from Greek βότρυς ""grape""), typological analysis, and community detection. The subtle differences are often in the use of the results: while in data mining, the resulting groups are the matter of interest, in automatic classification the resulting discriminative power is of interest.
+Cluster analysis was originated in anthropology by Driver and Kroeber in 1932 and introduced to psychology by Joseph Zubin in 1938 and Robert Tryon in 1939 and famously used by Cattell beginning in 1943 for trait theory classification in personality psychology."
+Cluster analysis,"Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). It is a main task of exploratory data analysis, and a common technique for statistical data analysis, used in many fields, including pattern recognition, image analysis, information retrieval, bioinformatics, data compression, computer graphics and machine learning.
+Cluster analysis itself is not one specific algorithm, but the general task to be solved. It can be achieved by various algorithms that differ significantly in their understanding of what constitutes a cluster and how to efficiently find them. Popular notions of clusters include groups with small distances between cluster members, dense areas of the data space, intervals or particular statistical distributions. Clustering can therefore be formulated as a multi-objective optimization problem. The appropriate clustering algorithm and parameter settings (including parameters such as the distance function to use, a density threshold or the number of expected clusters) depend on the individual data set and intended use of the results. Cluster analysis as such is not an automatic task, but an iterative process of knowledge discovery or interactive multi-objective optimization that involves trial and failure. It is often necessary to modify data preprocessing and model parameters until the result achieves the desired properties.
+Besides the term clustering, there is a number of terms with similar meanings, including automatic classification, numerical taxonomy, botryology (from Greek βότρυς ""grape""), typological analysis, and community detection. The subtle differences are often in the use of the results: while in data mining, the resulting groups are the matter of interest, in automatic classification the resulting discriminative power is of interest.
+Cluster analysis was originated in anthropology by Driver and Kroeber in 1932 and introduced to psychology by Joseph Zubin in 1938 and Robert Tryon in 1939 and famously used by Cattell beginning in 1943 for trait theory classification in personality psychology."
+Brown clustering,"Brown clustering is a hard hierarchical agglomerative clustering problem based on distributional information proposed by Peter Brown, William A. Brown, Vincent Della Pietra, Peter V. de Souza, Jennifer Lai, and Robert Mercer. It is typically applied to text, grouping words into clusters that are assumed to be semantically related by virtue of their having been embedded in similar contexts."
+Mixture model,"In statistics, a mixture model is a probabilistic model for representing the presence of subpopulations within an overall population, without requiring that an observed data set should identify the sub-population to which an individual observation belongs. Formally a mixture model corresponds to the mixture distribution that represents the probability distribution of observations in the overall population. However, while problems associated with ""mixture distributions"" relate to deriving the properties of the overall population from those of the sub-populations, ""mixture models"" are used to make statistical inferences about the properties of the sub-populations given only observations on the pooled population, without sub-population identity information.
+Mixture models should not be confused with models for compositional data, i.e., data whose components are constrained to sum to a constant value (1, 100%, etc.). However, compositional models can be thought of as mixture models, where members of the population are sampled at random. Conversely, mixture models can be thought of as compositional models, where the total size reading population has been normalized to 1."
+K-means clustering,"k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells. k-means clustering minimizes within-cluster variances (squared Euclidean distances), but not regular Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared errors, whereas only the geometric median minimizes Euclidean distances. For instance, better Euclidean solutions can be found using k-medians and k-medoids.
+The problem is computationally difficult (NP-hard); however, efficient heuristic algorithms converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. They both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the Gaussian mixture model allows clusters to have different shapes.
+The unsupervised k-means algorithm has a loose relationship to the k-nearest neighbor classifier, a popular supervised machine learning technique for classification that is often confused with k-means due to the name. Applying the 1-nearest neighbor classifier to the cluster centers obtained by k-means classifies new data into the existing clusters. This is known as nearest centroid classifier or Rocchio algorithm.
+
+"
+Spectral clustering,"In multivariate statistics, spectral clustering techniques make use of the spectrum (eigenvalues) of the similarity matrix of the data to perform dimensionality reduction before clustering in fewer dimensions. The similarity matrix is provided as an input and consists of a quantitative assessment of the relative similarity of each pair of points in the dataset.
+In application to image segmentation, spectral clustering is known as segmentation-based object categorization."
+Human genetic clustering,"Human genetic clustering refers to patterns of relative genetic similarity among human individuals and populations, as well as the wide range of scientific and statistical methods used to study this aspect of human genetic variation.
+Clustering studies are thought to be valuable for characterizing the general structure of genetic variation among human populations, to contribute to the study of ancestral origins, evolutionary history, and precision medicine. Since the mapping of the human genome, and with the availability of increasingly powerful analytic tools, cluster analyses have revealed a range of ancestral and migratory trends among human populations and individuals. Human genetic clusters tend to be organized by geographic ancestry, with divisions between clusters aligning largely with geographic barriers such as oceans or mountain ranges. Clustering studies have been applied to global populations, as well as to population subsets like post-colonial North America. Notably, the practice of defining clusters among modern human populations is largely arbitrary and variable due to the continuous nature of human genotypes; although individual genetic markers can be used to produce smaller groups, there are no models that produce completely distinct subgroups when larger numbers of genetic markers are used.Many studies of human genetic clustering have been implicated in discussions of race, ethnicity, and scientific racism, as some have controversially suggested that genetically derived clusters may be understood as proof of genetically determined races. Although cluster analyses invariably organize humans (or groups of humans) into subgroups, debate is ongoing on how to interpret these genetic clusters with respect to race and its social and phenotypic features. And, because there is such a small fraction of genetic variation between human genotypes overall, genetic clustering approaches are highly dependent on the sampled data, genetic markers, and statistical methods applied to their construction."
+Fuzzy clustering,"Fuzzy clustering (also referred to as soft clustering or soft k-means) is a form of clustering in which each data point can belong to more than one cluster.
+Clustering or cluster analysis involves assigning data points to clusters such that items in the same cluster are as similar as possible, while items belonging to different clusters are as dissimilar as possible. Clusters are identified via similarity measures. These similarity measures include distance, connectivity, and intensity. Different similarity measures may be chosen based on the data or the application."
+Agent-based model,"An agent-based model (ABM) is a computational model for simulating the actions and interactions of autonomous agents (both individual or collective entities such as organizations or groups) in order to understand the behavior of a system and what governs its outcomes. It combines elements of game theory, complex systems, emergence, computational sociology, multi-agent systems, and evolutionary programming. Monte Carlo methods are used to understand the stochasticity of these models.  Particularly within ecology, ABMs are also called individual-based models (IBMs). A review of recent literature on individual-based models, agent-based models, and multiagent systems shows that ABMs are used in many scientific domains including biology, ecology and social science. Agent-based modeling is related to, but distinct from, the concept of multi-agent systems or multi-agent simulation in that the goal of ABM is to search for explanatory insight into the collective behavior of agents obeying simple rules, typically in natural systems, rather than in designing agents or solving specific practical or engineering problems.Agent-based models are a kind of microscale model that simulate the simultaneous operations and interactions of multiple agents in an attempt to re-create and predict the appearance of complex phenomena. The process is one of emergence, which some express as ""the whole is greater than the sum of its parts"". In other words, higher-level system properties emerge from the interactions of lower-level subsystems. Or, macro-scale state changes emerge from micro-scale agent behaviors. Or, simple behaviors (meaning rules followed by agents) generate complex behaviors (meaning state changes at the whole system level).
+Individual agents are typically characterized as boundedly rational, presumed to be acting in what they perceive as their own interests, such as reproduction, economic benefit, or social status, using heuristics or simple decision-making rules. ABM agents may experience ""learning"", adaptation, and reproduction.Most agent-based models are composed of: (1) numerous agents specified at various scales (typically referred to as agent-granularity); (2) decision-making heuristics; (3) learning rules or adaptive processes; (4) an interaction topology; and (5) an environment. ABMs are typically implemented as computer simulations, either as custom software, or via ABM toolkits, and this software can be then used to test how changes in individual behaviors will affect the system's emerging overall behavior."
+Hierarchical clustering,"In data mining and statistics, hierarchical clustering (also called hierarchical cluster analysis or HCA) is a method of cluster analysis that seeks to build a hierarchy of clusters. Strategies for hierarchical clustering generally fall into two categories:
+
+Agglomerative: This is a ""bottom-up"" approach: Each observation starts in its own cluster, and pairs of clusters are merged as one moves up the hierarchy.
+Divisive: This is a ""top-down"" approach: All observations start in one cluster, and splits are performed recursively as one moves down the hierarchy.In general, the merges and splits are determined in a greedy manner. The results of hierarchical clustering are usually presented in a dendrogram.
+The standard algorithm for hierarchical agglomerative clustering (HAC) has a time complexity of 
+  
+    
+      
+        
+          
+            O
+          
+        
+        (
+        
+          n
+          
+            3
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathcal {O}}(n^{3})}
+   and requires 
+  
+    
+      
+        Ω
+        (
+        
+          n
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle \Omega (n^{2})}
+   memory, which makes it too slow for even medium data sets. However, for some special cases, optimal efficient agglomerative methods (of complexity 
+  
+    
+      
+        
+          
+            O
+          
+        
+        (
+        
+          n
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathcal {O}}(n^{2})}
+  ) are known: SLINK for single-linkage and CLINK for complete-linkage clustering. With a heap, the runtime of the general case can be reduced to 
+  
+    
+      
+        
+          
+            O
+          
+        
+        (
+        
+          n
+          
+            2
+          
+        
+        log
+        ⁡
+        n
+        )
+      
+    
+    {\displaystyle {\mathcal {O}}(n^{2}\log n)}
+  , an improvement on the aforementioned bound of 
+  
+    
+      
+        
+          
+            O
+          
+        
+        (
+        
+          n
+          
+            3
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathcal {O}}(n^{3})}
+  , at the cost of further increasing the memory requirements. In many cases, the memory overheads of this approach are too large to make it practically usable.
+Except for the special case of single-linkage, none of the algorithms (except exhaustive search in 
+  
+    
+      
+        
+          
+            O
+          
+        
+        (
+        
+          2
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathcal {O}}(2^{n})}
+  ) can be guaranteed to find the optimum solution.
+Divisive clustering with an exhaustive search is 
+  
+    
+      
+        
+          
+            O
+          
+        
+        (
+        
+          2
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathcal {O}}(2^{n})}
+  , but it is common to use faster heuristics to choose splits, such as k-means.
+Hierarchical clustering has the distinct advantage that any valid measure of distance can be used. In fact, the observations themselves are not required: all that is used is a matrix of distances."
+Single-linkage clustering,"In statistics, single-linkage clustering is one of several methods of hierarchical clustering. It is based on grouping clusters in bottom-up fashion (agglomerative clustering), at each step combining two clusters that contain the closest pair of elements not yet belonging to the same cluster as each other.
+A drawback of this method is that it tends to produce long thin clusters in which nearby elements of the same cluster have small distances, but elements at opposite ends of a cluster may be much farther from each other than two elements of other clusters. This may lead to difficulties in defining classes that could usefully subdivide the data."
+centroids,"In mathematics and physics, the centroid, also known as geometric center or center of figure, of a plane figure or solid figure is the arithmetic mean position of all the points in the surface of the figure. The same definition extends to any object in n-dimensional Euclidean space.In geometry, one often assumes uniform mass density, in which case the barycenter or center of mass coincides with the centroid. Informally, it can be understood as the point at which a cutout of the shape (with uniformly distributed mass) could be perfectly balanced on the tip of a pin.In physics, if variations in gravity are considered, then a center of gravity can be defined as the weighted mean of all points weighted by their specific weight.
+In geography, the centroid of a radial projection of a region of the Earth's surface to sea level is the region's geographical center."
+Centroid,"In mathematics and physics, the centroid, also known as geometric center or center of figure, of a plane figure or solid figure is the arithmetic mean position of all the points in the surface of the figure. The same definition extends to any object in n-dimensional Euclidean space.In geometry, one often assumes uniform mass density, in which case the barycenter or center of mass coincides with the centroid. Informally, it can be understood as the point at which a cutout of the shape (with uniformly distributed mass) could be perfectly balanced on the tip of a pin.In physics, if variations in gravity are considered, then a center of gravity can be defined as the weighted mean of all points weighted by their specific weight.
+In geography, the centroid of a radial projection of a region of the Earth's surface to sea level is the region's geographical center."
+List of centroids,"The following is a list of centroids of various two-dimensional and three-dimensional objects.  The centroid of an object 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+   in 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  -dimensional space is the intersection of all hyperplanes that divide 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+   into two parts of equal moment about the hyperplane. Informally, it is the ""average"" of all points of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  . For an object of uniform composition, the centroid of a body is also its center of mass. In the case of two-dimensional objects shown below, the hyperplanes are simply lines."
+Spectral centroid,"The spectral centroid is a measure used in digital signal processing to characterise a spectrum. It indicates where the center of mass of the spectrum is located. Perceptually, it has a robust connection with the impression of brightness of a sound. It is sometimes called center of spectral mass."
+K-means clustering,"k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells. k-means clustering minimizes within-cluster variances (squared Euclidean distances), but not regular Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared errors, whereas only the geometric median minimizes Euclidean distances. For instance, better Euclidean solutions can be found using k-medians and k-medoids.
+The problem is computationally difficult (NP-hard); however, efficient heuristic algorithms converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. They both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the Gaussian mixture model allows clusters to have different shapes.
+The unsupervised k-means algorithm has a loose relationship to the k-nearest neighbor classifier, a popular supervised machine learning technique for classification that is often confused with k-means due to the name. Applying the 1-nearest neighbor classifier to the cluster centers obtained by k-means classifies new data into the existing clusters. This is known as nearest centroid classifier or Rocchio algorithm.
+
+"
+Pappus's centroid theorem,"In mathematics, Pappus's centroid theorem (also known as  the Guldinus theorem, Pappus–Guldinus theorem or Pappus's theorem) is either of two related theorems dealing with the surface areas and volumes of surfaces and solids of revolution.
+The theorems are attributed to Pappus of Alexandria and Paul Guldin. Pappus's statement of this theorem appears in print for the first time in 1659, but it was known before, by Kepler in 1615 and by Guldin in 1640."
+List of second moments of area,"The following is a list of second moments of area of some shapes. The second moment of area, also known as area moment of inertia, is a geometrical property of an area which reflects how its points are distributed with respect to an arbitrary axis. The unit of dimension of the second moment of area is length to fourth power, L4, and should not be confused with the mass moment of inertia. If the piece is thin, however, the mass moment of inertia equals the area density times the area moment of inertia."
+Lloyd's algorithm,"In electrical engineering and computer science, Lloyd's algorithm, also known as Voronoi iteration or relaxation, is an algorithm named after Stuart P. Lloyd for finding evenly spaced sets of points in subsets of Euclidean spaces and partitions of these subsets into well-shaped and uniformly sized convex cells.  Like the closely related k-means clustering algorithm, it repeatedly finds the centroid of each set in the partition and then re-partitions the input according to which of these centroids is closest. In this setting, the mean operation is an integral over a region of space, and the nearest centroid operation results in Voronoi diagrams.
+Although the algorithm may be applied most directly to the Euclidean plane, similar algorithms may also be applied to higher-dimensional spaces or to spaces with other non-Euclidean metrics. Lloyd's algorithm can be used to construct close approximations to centroidal Voronoi tessellations of the input, which can be used for quantization, dithering, and stippling. Other applications of Lloyd's algorithm include smoothing of triangle meshes in the finite element method."
